@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Vecta Corp.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>	
+	<script src="js/jquery.mobilemenu.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+	<script>
+		$(function() {
+			$('#responsive-menu').mobileMenu();
+			$("input[type='checkbox'], input[type='radio']").checkboxradio();
+			$('#companysize').selectmenu();
+			$("input[type='submit']").button();
+			$(document).tooltip();
+		});
+	</script>
+
+	<style>
+		label {margin-bottom: 12px;}
+		.ui-selectmenu-button.ui-button {display: block;}
+	</style>
+</head>
+
+<body>
+	<main class="container">
+		<figure class="three columns">
+			<img src="images/logo.gif" class="scale-with-grid" alt="">
+		</figure>
+		
+		<nav class="thirteen columns">
+			<ul id="responsive-menu">
+				<li><a href="index.html" title="Achieve ultimate success with Vecta Corporation!">Home</a></li>
+				<li><a href="aboutus.html" title="Our Management team has a combined experience of over 4,000 years in the industry!">About Us</a></li>
+				<li><a href="solutions.html" title="Veca Corp offers 3 solutions for prospecting, converting, and retaining customers. Awesome!">Solutions</a></li>
+				<li><a href="support.html" title="Industry tips and tricks. Wow!">Support</a></li>
+				<li><a href="contactus.html" title="Get a response from one of our sales representatives within 2 hours!">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<header class="sixteen columns">
+			<img src="images/header.gif" class="scale-with-grid" alt="">
+		</header>
+		
+		<section id="welcome" class="eleven columns">
+			<h4>Contact Us</h4>
+			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
+				<fieldset>
+			    <legend>Contact a Sales Representative</legend>
+			    Name:
+			    <input type="text" name="name" maxlength="30" required="">
+			    Company Name:
+			    <input type="text" name="companyname" maxlength="30" required="">
+			    Phone:
+			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
+			    
+			    Email:
+				<input type="email" name="email" maxlength="30" required="">
+			   
+                What VectaCorp products are you interested in?<br>
+			    <label for="vProspect"><input type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
+			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
+			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
+			    
+			    <br>
+			    What is your current infrastructure?<br>
+			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
+			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
+			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
+			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
+
+			    <br>
+			    How many employees do you have?
+			    <select name="companysize" id="companysize">
+                    <option value="1-10">1-10</option>
+                    <option value="11-100">11-100</option>
+                    <option value="101-1000">101-1000</option>
+                    <option value="More than 1000">More than 1000</option>
+		        </select>
+                
+			    <p style="margin-bottom: 0; margin-top:12px;">How did you hear about us?</p>
+			    <select name="hearaboutus" id="hearaboutus" multiple="" size="5">
+                    <option value="Magazine Ad">Magazine Ad</option>
+                    <option value="Radio Ad">Radio Ad</option>
+                    <option value="TV Ad">TV Ad</option>
+                    <option value="Word of Mouth">Word of Mouth</option>
+                    <option value="Other">Other</option>
+		        </select>
+                
+			    Questions or comments for our sales representatives?
+			    <textarea name="questions" size="30" rows="5"></textarea>
+			    <input type="submit" name="submit" value="Submit Now">
+		    	</fieldset>
+			</form>
+	    </section>
+		
+		<section id="testimonials" class="five columns">
+			<h4 style="margin-bottom:13px;">Map</h4>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10499.828874202924!2d-117.2619397117606!3d32.74672115246387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80deaa3df3ebec13%3A0x69dce823cca55e63!2sDog%20Beach!5e0!3m2!1sen!2sus!4v1619729674966!5m2!1sen!2sus" width="250" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</section>
+	</main>
+</body>
+</html>
